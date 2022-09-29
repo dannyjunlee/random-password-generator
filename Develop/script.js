@@ -1,5 +1,7 @@
 // Assignment code here
 
+// NOTE: I did not realize there was starter code so I initially made this from scratch. Therefore, there are virtually no commits.
+
 // Used console.log to turn below string into an array for easier use:
 // var char = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+";
 // console.log(Array.from(char));
@@ -16,8 +18,8 @@ function genPassword() {
 
   // Use while loop to check if input is a number greater than or equal to 8;
   while (!validInput) {
-    if (isNaN(numChar) || numChar < 8) {
-      alert("Please provide a numerical value for your password length. It should be at least 8 characters long. \n" +
+    if (isNaN(numChar) || numChar < 8 || numChar > 128) {
+      alert("Please provide a numerical value for your password length. It should be at least 8 and no more than 128 characters long. \n" +
       "What you typed: " + numChar);
       numChar = prompt("How many characters would you like your password to be?");
     } else {
